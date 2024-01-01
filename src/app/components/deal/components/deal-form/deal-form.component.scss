@@ -1,0 +1,42 @@
+@import "variables";
+
+.content {
+  width: 30%;
+
+  .form-container {
+    position: relative;
+  
+    .remove-form-button {
+      position: absolute;
+      color: $white;
+      width: 23px;
+      height: 23px;
+      top: -16px;
+      right: -29px;
+      mat-icon {
+        height: 15px;
+        width: 17px;
+        font-size: 16px;
+      }
+    }
+  
+    form {
+      margin-top: 1.8rem;
+
+      mat-form-field {
+        display: block;
+      }
+    }
+  }
+  
+  .action-buttons {
+    margin-left: auto;
+    width: fit-content;
+    button {
+      margin-left: 0.5rem;
+    }
+    .save-button {
+      color: $white;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+<div class="content">
+  <button 
+    *ngIf="!dealForEdition"
+    mat-stroked-button 
+    color="accent" 
+    (click)="addForm()"
+  >Add Deal Form</button>
+  <div class="form-container" *ngFor="let dealFormGroup of dealFormArray.controls; let i = index">
+    <button 
+      *ngIf="dealFormArray.length > 1"
+      mat-mini-fab 
+      class="remove-form-button" 
+      color="warn" 
+      (click)="removeForm(i)"
+    >
+      <mat-icon>remove</mat-icon>
+    </button>
+    <form [formGroup]="dealFormGroup">
+      <mat-form-field color="accent" appearance="outline">
+        <mat-label>Deal Name</mat-label>
+        <input matInput formControlName="dealName">
+      </mat-form-field>
+      <mat-form-field color="accent" appearance="outline">
+        <mat-label>Deal Type</mat-label>
+        <mat-select formControlName="dealType">
+          <mat-option value="Acquisition">Acquisition</mat-option>
+          <mat-option value="Lease">Lease</mat-option>
+          <mat-option value="Development">Development</mat-option>
+        </mat-select>
+      </mat-form-field>
+      
+      <!-- <mat-form-field color="accent" appearance="outline">
+        <mat-label>Purchase Price</mat-label>
+        <input matInput formControlName="purchasePrice" prefix="$ " mask="separator.2" thousandSeparator=",">
+      </mat-form-field> -->
+      <lib-input-currency [label]="'Purchase Price'" formControlName="purchasePrice">
+        
+      </lib-input-currency>
+      <mat-form-field color="accent" appearance="outline">
+        <mat-label>Address</mat-label>
+        <input matInput formControlName="address">
+      </mat-form-field>
+      <mat-form-field color="accent" appearance="outline">
+        <mat-label>NOI</mat-label>
+        <input matInput formControlName="netOperatingIncome" prefix="$ " mask="separator.2" thousandSeparator=",">
+      </mat-form-field>
+    </form>
+  </div>
+  <div class="action-buttons">
+    <button mat-stroked-button color="accent" (click)="onCancel()">Cancel</button>
+    <button 
+      class="save-button" 
+      mat-raised-button 
+      color="accent"
+      [disabled]="!dealFormArray.valid"
+      (click)="onSave()"
+    >Save</button>
+  </div>
+</div>

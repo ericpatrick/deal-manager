@@ -1,0 +1,10 @@
+<h2 mat-dialog-title>Remove {{data.dealName}}?</h2>
+
+<mat-dialog-content>
+  <p>Do you really want to remove {{data.dealName}}?</p>
+</mat-dialog-content>
+
+<mat-dialog-actions class="action-buttons">
+  <button class="no-button" mat-raised-button color="accent" (click)="onClick(null)">No Thanks</button>
+  <button mat-stroked-button color="accent" (click)="onClick(data)">Yes</button>
+</mat-dialog-actions>

@@ -1,0 +1,13 @@
+<mat-form-field color="accent" appearance="outline">
+  <mat-label>{{ label }}</mat-label>
+  <input 
+    matInput 
+    prefix="$ " 
+    mask="separator.2" 
+    thousandSeparator=","
+    [formControl]="formControl"
+    [disabled]="disabled"
+    (blur)="onBlur()"
+    (input)="onInput()"
+  >
+</mat-form-field>

@@ -1,0 +1,26 @@
+@import "variables";
+
+:host {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+h2 {
+  display: flex;
+}
+
+.action-buttons {
+  margin-left: auto;
+  width: fit-content;
+
+  button {
+    margin-left: 0.5rem;
+  }
+  
+  .no-button {
+    color: $white;
+    padding: 0.5rem;
+  }
+}

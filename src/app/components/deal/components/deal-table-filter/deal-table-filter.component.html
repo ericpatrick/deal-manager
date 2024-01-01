@@ -1,0 +1,50 @@
+<mat-accordion class="filter-container">
+  <mat-expansion-panel hideToggle="">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Filter Deal By
+      </mat-panel-title>
+      <mat-panel-description class="filter-header-description">
+        * Use two fields at least
+        <mat-icon [matBadge]="filtersAmount" [matBadgeHidden]="filtersAmount < 2" matBadgeColor="accent">filter_list</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <form class="dense-3" [formGroup]="filterForm">
+      <mat-form-field color="accent" appearance="outline">
+        <mat-label>Deal Name</mat-label>
+        <input matInput formControlName="dealName">
+      </mat-form-field>
+      <mat-form-field color="accent" appearance="outline">
+        <mat-label>Deal Type</mat-label>
+        <mat-select formControlName="dealType">
+          <mat-option value="Acquisition">Acquisition</mat-option>
+          <mat-option value="Lease">Lease</mat-option>
+          <mat-option value="Development">Development</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <lib-input-currency [label]="'Purchase Price'" formControlName="purchasePrice">
+      </lib-input-currency>
+      <mat-form-field color="accent" appearance="outline">
+        <mat-label>Address</mat-label>
+        <input matInput formControlName="address">
+      </mat-form-field>
+      <lib-input-currency [label]="'NOI'" formControlName="netOperatingIncome">
+      </lib-input-currency>
+      <mat-form-field color="accent" appearance="outline">
+        <mat-label>Cap Rate</mat-label>
+        <input matInput 
+        mask="percent.2"
+        suffix="%"
+        [dropSpecialCharacters]="false"
+        [outputTransformFn]="outputPercentTransformFn"
+        formControlName="capRate">
+      </mat-form-field>
+    </form>
+    
+    <mat-action-row>
+      <button mat-button color="warn" (click)="doClean()" [disabled]="filtersAmount < 1">Clean</button>
+      <button mat-button color="accent" (click)="doFilter()" [disabled]="!filterForm.valid">Filter</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>

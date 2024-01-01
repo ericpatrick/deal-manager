@@ -1,0 +1,21 @@
+.header {
+  font-size: 1.5rem;
+  font-weight: 700;
+  mat-icon {
+    margin-right: 1rem;
+    font-weight: 700;
+  }
+}
+
+.field-wrapper {
+  margin: 1rem;
+
+  .field-label {
+    font-weight: 700;
+    font-size: 0.8rem;
+  }
+  
+  .field-text {
+    margin-left: 0.3rem;
+  }
+}

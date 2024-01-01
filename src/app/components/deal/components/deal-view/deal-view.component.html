@@ -1,0 +1,22 @@
+<section>
+  <div class="field-wrapper">
+    <span class="field-label">Deal Type</span>
+    <p class="field-text">{{ deal.dealType }}</p>
+  </div>
+  <div class="field-wrapper">
+    <span class="field-label">Purchase Price</span>
+    <p class="field-text">{{ deal.purchasePrice | currency }}</p>
+  </div>
+  <div class="field-wrapper">
+    <span class="field-label">Address</span>
+    <p class="field-text">{{ deal.address }}</p>
+  </div>
+  <div class="field-wrapper">
+    <span class="field-label">NOI</span>
+    <p class="field-text">{{ deal.netOperatingIncome | currency }}</p>
+  </div>
+  <div class="field-wrapper">
+    <span class="field-label">Cap Rate</span>
+    <p class="field-text">{{ deal.capRate | percent:".0-2" }}</p>
+  </div>
+</section>

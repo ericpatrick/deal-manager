@@ -1,0 +1,13 @@
+<mat-toolbar class="header" color="primary">
+  <button
+    *ngIf="returnToPrevious$ | async"
+    mat-icon-button 
+    (click)="backToPreviousPage()"
+  ><mat-icon>arrow_back</mat-icon>
+  </button>
+  <span>{{ title$ | async }}</span>
+</mat-toolbar>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
