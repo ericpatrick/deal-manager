@@ -6,7 +6,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
 import { DealConfirmationModalComponent } from '../deal-confirmation-modal/deal-confirmation-modal.component';
 import { Router } from '@angular/router';
-import { Compare } from 'src/app/components/shared/utils';
+import { Compare } from 'src/app/shared/utils';
 
 @Component({
   selector: 'app-deal-table',

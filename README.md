@@ -1,27 +1,29 @@
-# DealManager
+# Deal Manager
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.10.
+Project intended for testing with Angular. This includes basic and advanced concepts of Angular, such as lazy load, Observables, custom form controls and services.
 
-## Development server
+## prerequisites
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Nodejs: 18+
+Angular: 16.x
 
-## Code scaffolding
+## Installation and running locally
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+To install project dependencies, run the following command:
 
-## Build
+`npm install`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+After that, just run the command `npx ng serve` to compile and run the server. The project will run at [http://localhost:4200](http://localhost:4200).
 
-## Running unit tests
+## Project structure
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+The project folder structure, in general, follows the standard already established by Angular. However, an addition was made to this structure in order to make the project more organized. Inside the `app` folder we have subfolders that refer to Angular modules. The `shared` module, in specific, is the module responsible for gathering artifacts that are common to the entire application. Within each module we have the `components`, `models` and `services` folders. The `components` folder contains the components of the respective module, just as `services` contains the services and `models` contains the application domain models and auxilar models used inside components.
 
-## Running end-to-end tests
+## Generating artifacts
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+To generate project artifacts in development mode, run the `npx ng build` command. The execution result will be in the `dist` folder in the project root. This can be served by the web server of your choice.
 
-## Further help
+To compile the project in production mode, simply add the `--prod` parameter to the `npx ng build` command.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Improvement points
+- Perform unit tests on components

@@ -1,4 +1,4 @@
-import { NotificationsModule } from './../shared/components/notifications/notifications.module';
+import { NotificationsModule } from '../shared/components/notifications/notifications.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';

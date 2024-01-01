@@ -3,7 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { DealService, HeaderService } from '../../services';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Deal, DealDTO, DealForm, DealType } from '../../models';
-import { NotificationsService } from 'src/app/components/shared/components/notifications/services/notifications.service';
+import { NotificationsService } from 'src/app/shared/components/notifications/services/notifications.service';
 
 @Component({
   selector: 'app-deal-form',
