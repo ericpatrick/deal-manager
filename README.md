@@ -4,8 +4,9 @@ Project intended for testing with Angular. This includes basic and advanced conc
 
 ## prerequisites
 
-Nodejs: 18+
-Angular: 16.x
+Nodejs: 18+;
+
+Angular: 16.x;
 
 ## Installation and running locally
 
